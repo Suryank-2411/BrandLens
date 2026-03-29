@@ -1,0 +1,13 @@
+streamlit
+plotly
+pandas
+numpy
+google-generativeai
+langgraph
+langchain-core
+yt-dlp
+opencv-python-headless
+openai-whisper
+boto3
+Pillow
+ffmpeg-python
