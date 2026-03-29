@@ -10,22 +10,3 @@ Detects any brand logo without a predefined list — powered by vision AI
 Identifies what the logo is physically on (clothing, packaging, signage, etc.)
 Analyses ±10 seconds of audio per detection to classify brand sentiment
 Supports YouTube URLs, S3 links, and local video files
-
-Input (YouTube URL / S3 URL / User Prompt)
-              ↓
-    ┌─────────────────────┐
-    │   Node A — Vision   │  Gemini analyses each frame
-    │   Logo + Context    │  "Nike logo on athlete's jersey"
-    └──────────┬──────────┘
-               │
-    ┌──────────▼──────────┐
-    │   Node B — Audio    │  Whisper extracts transcript
-    │   Transcription     │  + aligns to timestamps
-    └──────────┬──────────┘
-               │
-    ┌──────────▼──────────┐
-    │   Node C — Summary  │  Gemini combines vision +
-    │   Generation        │  audio → per-frame summary
-    └──────────┬──────────┘
-               ↓
-          Streamlit UI
